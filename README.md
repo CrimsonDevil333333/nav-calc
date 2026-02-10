@@ -1,46 +1,43 @@
 # NavCalc Pro 🦞⚓
 
-A high-performance Maritime Engineering and Navigation CLI tool. Built for Marine Engineers, Deck Officers, and Logistics Managers who need rapid, accurate, and professional-grade maritime calculations.
-
-## For Whom? 🚢
-- **Marine Engineers**: Track fuel efficiency (SFOC) and propulsion performance (Slip).
-- **Deck Officers**: Rapid voyage planning, ETA estimation, and Great Circle distance checks.
-- **Logistics Managers**: Estimate bunkering requirements for voyages using the Cube Law.
-
-## Advanced Features 🚀
-
-- **Interactive Console**: Run `python3 main.py` without arguments to enter a menu-driven, interactive session.
-- **Voyage Suite**: Calculate Speed, Time, Distance, and multi-leg ETAs.
-- **Engineering Module**:
-  - **Propeller Slip**: Compare engine speed vs. actual speed over ground.
-  - **SFOC Engine**: Calculate Specific Fuel Oil Consumption ($g/kWh$).
-- **Fuel Cube Law**: Advanced estimation using ship-specific consumption curves ($F \propto S^3$).
-- **Rich Visualization**: Fully formatted tables, panels, and progress indicators for all calculations.
+A high-performance Maritime Engineering and Navigation CLI tool. Built for Marine Engineers, Deck Officers, and Logistics Managers.
 
 ## Installation 📦
 
+The recommended way to install NavCalc globally is via `pipx`. This ensures dependencies like `rich` are isolated and don't mess with your system python.
+
 ```bash
-pip install rich
+# Install directly from your clone
+pipx install .
+
+# Or if you just want to run it once without installing
+pipx run main.py
 ```
 
-## Quick Start 🛠️
-
-### 1. Interactive Mode (Menu Driven)
-Simply run:
+Once installed via `pipx`, you can run the tool from anywhere using:
 ```bash
-python3 main.py
+navcalc
 ```
 
-### 2. SFOC Calculation (Engineering)
-*Calculate efficiency for an engine consuming 1200kg/hr at 8000kW:*
+## Features 🚀
+
+- **Interactive Console**: Run `navcalc` without arguments for a menu-driven session.
+- **Voyage Suite**: Calculate Speed, Time, Distance, and ETAs.
+- **Engineering Module**: Propeller Slip and SFOC ($g/kWh$) calculations.
+- **Fuel Cube Law**: Advanced consumption estimation ($F \propto S^3$).
+- **Rich Visualization**: Professional tables and panels.
+
+## Usage 🛠️
+
+### 1. Interactive Mode
 ```bash
-# Available via Interactive Menu -> Engineering -> SFOC
+navcalc
 ```
 
-### 3. Great Circle Distance (Navigation)
+### 2. Great Circle Distance
 ```bash
-python3 main.py dist 18.97 72.82 25.27 55.23
+navcalc dist 18.97 72.82 25.27 55.23
 ```
 
 ---
-*Maintained by Satyaa & Clawdy*
+*Built for Satyaa by Clawdy*
