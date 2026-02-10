@@ -1,62 +1,46 @@
 # NavCalc Pro 🦞⚓
 
-A high-performance Maritime Engineering and Navigation CLI tool. Designed for rapid calculations of voyage planning, engine performance, and nautical logistics.
+A high-performance Maritime Engineering and Navigation CLI tool. Built for Marine Engineers, Deck Officers, and Logistics Managers who need rapid, accurate, and professional-grade maritime calculations.
 
-## Features 🚀
+## For Whom? 🚢
+- **Marine Engineers**: Track fuel efficiency (SFOC) and propulsion performance (Slip).
+- **Deck Officers**: Rapid voyage planning, ETA estimation, and Great Circle distance checks.
+- **Logistics Managers**: Estimate bunkering requirements for voyages using the Cube Law.
 
-- **STD Engine**: Calculate Speed, Time, or Distance based on any two inputs.
-- **Great Circle Distance**: Accurate haversine-based distance between global coordinates.
-- **Maritime Fuel Logic**: Estimate fuel consumption using the **Cube Law** ($F_1/F_2 = (S_1/S_2)^3$), essential for maritime efficiency planning.
-- **Propeller Slip Analysis**: Calculate engine speed vs. observed speed to determine propulsion efficiency.
-- **Passage Planning (ETA)**: Accurate arrival estimations based on departure time and steaming speed.
-- **Rich UI**: Professional terminal output with tables and panels.
+## Advanced Features 🚀
+
+- **Interactive Console**: Run `python3 main.py` without arguments to enter a menu-driven, interactive session.
+- **Voyage Suite**: Calculate Speed, Time, Distance, and multi-leg ETAs.
+- **Engineering Module**:
+  - **Propeller Slip**: Compare engine speed vs. actual speed over ground.
+  - **SFOC Engine**: Calculate Specific Fuel Oil Consumption ($g/kWh$).
+- **Fuel Cube Law**: Advanced estimation using ship-specific consumption curves ($F \propto S^3$).
+- **Rich Visualization**: Fully formatted tables, panels, and progress indicators for all calculations.
 
 ## Installation 📦
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/CrimsonDevil333333/nav-calc.git
-   cd nav-calc
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install rich
-   ```
-
-3. (Optional) Make it executable:
-   ```bash
-   chmod +x main.py
-   alias nav='./main.py'
-   ```
-
-## Usage 🛠️
-
-### 1. Speed/Time/Distance
 ```bash
-python3 main.py std --speed 15.5 --distance 450
+pip install rich
 ```
 
-### 2. ETA Calculation
+## Quick Start 🛠️
+
+### 1. Interactive Mode (Menu Driven)
+Simply run:
 ```bash
-python3 main.py eta --distance 1200 --speed 14 --departure "2026-02-10 12:00"
+python3 main.py
 ```
 
-### 3. Fuel Estimation (Cube Law)
-*Calculate total fuel for 1500nm at 12 knots, knowing the ship consumes 25 tons/day at 15 knots:*
+### 2. SFOC Calculation (Engineering)
+*Calculate efficiency for an engine consuming 1200kg/hr at 8000kW:*
 ```bash
-python3 main.py fuel --speed 12 --distance 1500 --cons 25 --base-speed 15
+# Available via Interactive Menu -> Engineering -> SFOC
 ```
 
-### 4. Propeller Slip
-```bash
-python3 main.py slip --pitch 22.5 --rpm 95 --speed 14.2
-```
-
-### 5. Great Circle Distance
+### 3. Great Circle Distance (Navigation)
 ```bash
 python3 main.py dist 18.97 72.82 25.27 55.23
 ```
 
 ---
-*Built for Satyaa by Clawdy*
+*Maintained by Satyaa & Clawdy*
